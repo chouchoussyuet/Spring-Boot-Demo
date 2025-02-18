@@ -34,6 +34,45 @@ spring-jpa-demo
 
 ## Cài đặt và chạy dự án
 ### 1. Clone dự án 
-``` git clone https://github.com/your-username/spring-jpa-demo.git
-``` cd spring-jpa-demo
-  
+``` git clone https://github.com/your-username/spring-jpa-demo.git ```
+``` cd spring-jpa-demo ``` 
+### Cấu hình MySQL (trong file application.properties)
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database
+spring.datasource.username=root
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
+```
+### Cài đặt dependencies:
+```
+mvn clean install
+```
+### Chạy ứng dụng:
+```
+mvn spring-boot:run
+```
+### Gửi request đến API 
+- Thêm nhân viên (POST)
+```
+curl -X POST http://localhost:8080/employee/
+```
+- Lấy danh sách tất cả các nhân viên (GET)
+```
+curl -X POST http://localhost:8080/employee/
+```
+
+## API Endpoints
+
+| HTTP Method | Endpoint                 | Chức năng                     |
+|------------|--------------------------|-------------------------------|
+| POST       | `/employee/`             | Thêm danh sách nhân viên      |
+| GET        | `/employee/findall`      | Lấy danh sách tất cả nhân viên |
+| GET        | `/employee/findbyid/{id}` | Lấy nhân viên theo ID         |
+| DELETE     | `/employee/delete`       | Xóa tất cả dữ liệu            |
+
+
+## Demo 
+![image](https://github.com/user-attachments/assets/14636317-8c78-48e3-b90d-042f43a6f251)
+
