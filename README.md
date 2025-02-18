@@ -17,20 +17,22 @@ Dự án này là một ứng dụng REST API đơn giản sử dụng Spring Bo
 
 ## Cấu trúc thư mục 
 spring-jpa-demo
-│── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com.example
-│   │   │       ├── controller  # Chứa các API endpoints
-│   │   │       ├── modal       # Chứa các model (Entity)
-│   │   │       ├── repository  # Chứa JPA repository
-│   │   │       ├── service     # Chứa logic xử lý
-│   │   │       ├── SpringJpaDemoApplication.java  # File khởi động ứng dụng
-│   ├── resources
-│   │   ├── application.properties  # Cấu hình database
-│   ├── test  # Chứa các test cases
-│── pom.xml  # File cấu hình Maven
-│── README.md  # Tài liệu hướng dẫn
+## Cấu trúc thư mục 
+
+- **spring-jpa-demo/**
+  - **src/**
+    - **main/**
+      - **java/com.example/**
+        - **controller/**  - Chứa các API endpoints
+        - **modal/**  - Chứa các model (Entity)
+        - **repository/**  - Chứa JPA repository
+        - **service/**  - Chứa logic xử lý
+        - **SpringJpaDemoApplication.java**  - File khởi động ứng dụng
+      - **resources/**
+        - **application.properties**  - Cấu hình database
+    - **test/**  - Chứa các test cases
+  - **pom.xml**  - File cấu hình Maven
+  - **README.md**  - Tài liệu hướng dẫn
 
 ## Cài đặt và chạy dự án
 ### 1. Clone dự án 
